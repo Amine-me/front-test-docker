@@ -3,14 +3,14 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Tutorial } from '../models/tutorial.model';
 
-const baseUrl = 'http://localhost:8080/api/tutorials';
+const baseUrl =
+  'http://ip172-18-0-154-ca1pm7g9jotg00b6epu0-8080.direct.labs.play-with-docker.com/api/tutorials';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class TutorialService {
-
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getAll(): Observable<Tutorial[]> {
     return this.http.get<Tutorial[]>(baseUrl);
