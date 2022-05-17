@@ -7,7 +7,7 @@ COPY . .
 RUN npm run build --prod
 # production environment
 FROM nginx:stable-alpine
-COPY --from=node /app/dist/angular11-crud /usr/share/nginx/html
+COPY --from=node /app/dist/Angular11Crud /usr/share/nginx/html
 # new
 COPY nginx/nginx.conf /etc/nginx/conf.d/default.conf
 EXPOSE 80
